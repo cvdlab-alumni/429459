@@ -18,3 +18,4 @@ console.log(riga);
 riga="";
 
 };
+console.log("\n");
