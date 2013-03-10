@@ -1,0 +1,17 @@
+function select(data, key, values) {
+var appoggio = [];
+
+	for (var i=0; i<data.length; i++){
+		for (var j=0; j<values.length; j++){
+		console.log("INIZIO");		
+		console.log(d);
+		console.log(key);
+		console.log(d[key]);
+		console.log(v);
+		console.log("FINE");
+			if (data[i][key]===values[j])
+			appoggio.push(data[i]);
+	}
+}
+return appoggio;
+}
