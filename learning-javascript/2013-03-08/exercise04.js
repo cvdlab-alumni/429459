@@ -1,11 +1,7 @@
-function select(data, key, values) {
-var appoggio = [];
-
-	for (var i=0; i<data.length; i++){
-		for (var j=0; j<values.length; j++){
-			if (data[i][key]===values[j])
-			appoggio.push(data[i]);
-	}
-}
-return appoggio;
+function select (data, key, values) {
+	return data.filter(function (item_data) {
+		return values.some(function (item_values) {
+			return item_data[key] === item_values;
+		})
+	})
 }
