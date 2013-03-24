@@ -20,11 +20,11 @@ function Triangle (e1, e2, e3){
 
  
 Triangle.prototype.perimeter = function() {
-	return ( edge1.length() + edge2.length() + edge3.length() );
+	return ( this.edge1.length() + this.edge2.length() + this.edge3.length() );
 }
 
 Triangle.prototype.area = function(){
-	return Math.sqrt( (this.perimeter()/2)*(edge1.length() - this.perimeter()/2)*(edge2.length() - this.perimeter()/2)*(edge3.length() - this.perimeter()/2));
+	return Math.sqrt( (this.perimeter()/2)*(this.edge1.length() - this.perimeter()/2)*(this.edge2.length() - this.perimeter()/2)*(this.edge3.length() - this.perimeter()/2));
 }
 
 
