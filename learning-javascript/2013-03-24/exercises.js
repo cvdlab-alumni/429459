@@ -24,7 +24,7 @@ Triangle.prototype.perimeter = function() {
 }
 
 Triangle.prototype.area = function(){
-	return Math.sqrt( (this.perimeter()/2)*(this.edge1.length() - this.perimeter()/2)*(this.edge2.length() - this.perimeter()/2)*(this.edge3.length() - this.perimeter()/2));
+	return Math.sqrt( (this.perimeter()/2)*(this.perimeter()/2-this.edge1.length())*(this.perimeter()/2-this.edge2.length())*(this.perimeter()/2-this.edge3.length()));
 }
 
 
