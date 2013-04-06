@@ -54,7 +54,7 @@ north_face = STRUCT([n_1_fragment,n_2_fragment,n_3_fragment,n_4_fragment,n_5_fra
 #z_translation
 north = T([3])([h_pillar0])(north_face)
 north = S([3])([1.2])(north)
-north = S([1])([0.9])(north)
+north = S([1])([0.91])(north)
 north = R([1,2])(PI/2)(north)
 north = T([1])([11.25])(north)
 
@@ -152,7 +152,7 @@ msin_fin_trasl = T([1,2,3])([9.67,6.50,(2.5+0.39)*2])(muro_sin_fin)
 
 west = STRUCT([muro_princ_trasl,mbf_trasl, mlf_trasl, muro_des_trasl,msf_trasl,ms_trasl,md2_trasl,mbf2_trasl,mtf_trasl,mssf_trasl,msin_fin_trasl,mt_trasl])
 
-
+west = T([2,3])([-0.08, 0.5])(west)
 
 ### VIEW ###
 building = STRUCT([building, north, east, west])
