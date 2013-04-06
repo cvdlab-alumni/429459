@@ -10,10 +10,11 @@ distance_b_square_pillars_0 = 2.79
 distance_l_square_pillars_0 = 1.067
 distance_square_pillars_y_0 = 5.32
 distance_from_circle_pillars_0 = 1.433
+distance_from_circle_pillars_1 = 0.73
 
 side_square_little_pillar_1 = 0.2
 #floors
-height_floor_1 = 0.3905
+height_floor_1 = 0.39
 
 #### support functions and variables ####
 
@@ -69,7 +70,7 @@ square_pillars_1 = STRUCT([square_pillars_1_T, square_pillar_1_T_Y])
 pillars_3_top_square_1 = STRUCT(NN(3)([ square_pillar_0, T([1])([dist_pillars0_x]) ] ))
 pillars_top_Y_1_part = STRUCT([pillars_3_top_square_1, T([1])([3*dist_pillars0_x])(circle_pillar_T_0), T([1])([4*dist_pillars0_x])(square_pillar_0)])
 square_pillar_little_1 = CUBOID([side_square_little_pillar_1,side_square_little_pillar_1,h_pillar0])
-square_pillar_little_1_T = T([1])([1.46])(square_pillar_little_1)
+square_pillar_little_1_T = T([1])([distance_from_circle_pillars_1])(square_pillar_little_1)
 
 pillars_top_Y_1_orig = STRUCT([pillars_top_Y_1_part, square_pillar_little_1_T])
 pillars_top_Y_1 = T([2,3])([distance_square_pillars_y_0, height_floor_1+h_pillar0])(pillars_top_Y_1_orig)
@@ -106,13 +107,16 @@ pillars12_delta_down = T([3])([2*h_pillar0 + height_floor_1])(STRUCT([pillars12_
 pillars12_delta_top = T([3])([2*h_pillar0 + height_floor_1])(T([2])([dist_pillars0_y])( STRUCT([pillars12_delta, T([1])([dist_pillars0_x]), pillars12_delta])  )) 
 
 pillars3 = STRUCT([pillars_top_3, pillars_down_3, pillar_single_top_right_3, pillars12_delta_top, pillars12_delta_down])
+
+
+
 #####PARTIAL#####
-build_part = STRUCT([pillars0,pillars1,pillars2,pillars3])
+building = STRUCT([pillars0,pillars1,pillars2,pillars3])
 
 #####VIEW#####
 #VIEW(circle_pillars)
 #VIEW(pillars)
-VIEW(build_part)
+#VIEW(build_part)
 #VIEW(pillars_top_3_orig)
 #VIEW(pillars1)
 #VIEW(square_pillars_1_T)
