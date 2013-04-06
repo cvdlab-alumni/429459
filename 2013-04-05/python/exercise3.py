@@ -52,10 +52,10 @@ n_11_fragment = T([1])([dist_btw_lboarder_win+w_windows_n+dist_btw_win_lwin+w_li
 #n_face
 north_face = STRUCT([n_1_fragment,n_2_fragment,n_3_fragment,n_4_fragment,n_5_fragment,n_6_fragment,n_7_fragment,n_8_fragment,n_9_fragment,n_10_fragment,n_11_fragment])
 #z_translation
-north_face = T([3])([h_pillar0+height_floor_1])(north_face)
-
+north = T([3])([h_pillar0+height_floor_1])(north_face)
+north = S([3])([1.2])(north)
 ### VIEW ###
+building = STRUCT([building, north])
 #VIEW(building)
-VIEW(north_face)
+VIEW(building)
 
-VIEW(STRUCT([building,COLOR(RED)(north_face)]))
