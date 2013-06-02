@@ -24,36 +24,36 @@
 //////////CHOICE
 var definition = 16
 var definitionDisks = [64, 2];
-// var DEF=prompt("Please enter the definition that you want; Pay attention! An high definition means much time to load the model! (Middle = 1min ca)","low-middle-high");
+var DEF=prompt("Please enter the definition that you want; Pay attention! An high definition means much time to load the model! (Middle = 1min ca)","low-middle-high");
 
-// if(DEF === "low"){
-//   definition = 6;
-//   var definitionDisks = [32, 2];
-// }
-// else if(DEF === "middle"){
-//   definition = 16;
-//   var definitionDisks = [64, 2];
-// }
-// else if(DEF === "high"){
-//   definition = 42;
-//   var definitionDisks = [100, 2];
-// }
-// else{
-//   alert("incorrect value");
-//   return false;
-//}
-//var joyColorConfirm = confirm("Click OK to view a black Joypad, or Cancel, to view a white joypad!");
+if(DEF === "low"){
+  definition = 6;
+  var definitionDisks = [32, 2];
+}
+else if(DEF === "middle"){
+  definition = 16;
+  var definitionDisks = [64, 2];
+}
+else if(DEF === "high"){
+  definition = 42;
+  var definitionDisks = [100, 2];
+}
+else{
+  alert("incorrect value");
+  return false;
+}
+var joyColorConfirm = confirm("Click OK to view a black Joypad, or Cancel, to view a white joypad!");
 var baseColor = [0.35,0.35,0.35];
 var buttonsColor = [1,1,1];
 
-// if(joyColorConfirm){
-//   baseColor = [0.35,0.35,0.35];
-//   buttonsColor = [1,1,1];
-// }
-// else{
-//   baseColor = [1,1,1];
-//   buttonsColor = [0,0,0];
-// }
+if(joyColorConfirm){
+  baseColor = [0.35,0.35,0.35];
+  buttonsColor = [1,1,1];
+}
+else{
+  baseColor = [1,1,1];
+  buttonsColor = [0,0,0];
+}
 
 //DOMAINS//
 var dom1D = INTERVALS(1)(definition);
