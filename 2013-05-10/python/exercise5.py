@@ -9,7 +9,7 @@ from pyplasm import *
 from utilities import *
 
 dom1D = INTERVALS(1)(16)
-dom2D = GRID([8,8])
+dom2D = GRID([6,6])
 
 def bezier(points):
 	return BEZIER(S1)(points)
